@@ -2,7 +2,7 @@
 input <- read.delim("https://raw.github.com/jdk1114/Ninety-One/main/Examples.txt", header = FALSE, stringsAsFactors = FALSE)
 
 ## Manually entering an input
-input <- "The pump is 1000000 KGs deep underground"
+# input <- "The pump is 1000000 KGs deep underground"
 
 ## disabling scientific notation 
 options(scipen = 999)
