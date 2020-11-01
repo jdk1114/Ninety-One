@@ -2,7 +2,7 @@
 input <- read.delim("https://raw.github.com/jdk1114/Ninety-One/main/Examples.txt", header = FALSE, stringsAsFactors = FALSE)
 
 ## Manually entering an input
-# input <- "The pump is 1000000 KGs deep underground"
+# input <- "The pump is 10022 KGs deep underground"
 
 ## disabling scientific notation 
 options(scipen = 999)
@@ -88,7 +88,9 @@ numbersToWords <- function(textInput) {
                     ""
       ), 
       ## If the last two digits are both not zero then include 'and' to combine the first digit and the last two digits
-      ifelse(lastDigits != "", paste0(" and ", lastDigits), "")
+      paste0(ifelse(digits[1] != 0 & lastDigits != "", " and ", ""),
+             ifelse(lastDigits != "", lastDigits, "")
+      )
       )
     }
     
